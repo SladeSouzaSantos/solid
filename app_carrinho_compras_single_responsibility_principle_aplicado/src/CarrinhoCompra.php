@@ -19,8 +19,12 @@ class CarrinhoCompra {
     }
 
     public function adicionarItem(Item $item) {
-        array_push($this->itens, $item);
-        return true;
+        if($item->itemValido()){
+            array_push($this->itens, $item);
+            return true;
+        }
+
+        return false;        
     }
 
     public function validarCarrinho() {
