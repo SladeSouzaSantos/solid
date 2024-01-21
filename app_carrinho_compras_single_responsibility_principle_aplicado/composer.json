@@ -1,0 +1,16 @@
+{
+    "name": "sladesantos/app_carrinho_compras_single_responsibility_principle",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Pedro Santos",
+            "email": "pedro_eng.petroleo@hotmail.com"
+        }
+    ],
+    "require": {}
+}
