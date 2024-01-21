@@ -24,8 +24,13 @@ echo "<pre>";
 print_r($pedido);
 echo "</pre>";
 //----------------------------------
-$pedido->getCarrinhoCompra()->adicionarItem($item1);
-$pedido->getCarrinhoCompra()->adicionarItem($item2);
+if($item1->itemValido()){
+    $pedido->getCarrinhoCompra()->adicionarItem($item1);
+}
+
+if($item2->itemValido()){
+    $pedido->getCarrinhoCompra()->adicionarItem($item2);
+}
 //----------------------------------
 echo "<h4>Pedido</h4>";
 echo "<pre>";
