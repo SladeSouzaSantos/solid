@@ -12,5 +12,7 @@
             "email": "pedro_eng.petroleo@hotmail.com"
         }
     ],
-    "require": {}
+    "require-dev": {
+        "phpunit/phpunit": "^5.2"
+    }
 }
