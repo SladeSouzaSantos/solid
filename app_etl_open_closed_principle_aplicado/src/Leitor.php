@@ -24,20 +24,22 @@ class Leitor{
     }
 
     public function lerArquivo() : array{
-        $caminho = $this->getDirectorio().'/'.$this->getArquivo();
-
-        $arquivo = new Arquivo();
+        $caminho = $this->getDirectorio().'/'.$this->getArquivo();        
         
         $extensao = explode('.', $this->getArquivo());
 
         $index = count($extensao) - 1;
-        
-        if($extensao[$index] == 'csv'){
-            $arquivo->lerArquivoCSV($caminho);
-        }else if($extensao[$index] == 'txt'){
-            $arquivo->lerArquivoTXT($caminho);
-        }
 
-        return $arquivo->getDados();
+        $classe = '\App\extrator\\' . ucfirst($extensao[$index]);
+
+        return call_user_func_array(
+            [
+                new $classe,
+                'lerArquivo'
+            ],
+            [
+                $caminho
+            ]
+        );
     }
 }
