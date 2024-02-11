@@ -1,0 +1,15 @@
+{
+    "name": "sladesantos/app_poligonos",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Pedro Santos",
+            "email": "pedro.cyberoil@gmail.com"
+        }
+    ],
+    "require": {}
+}
